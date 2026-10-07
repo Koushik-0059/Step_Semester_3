@@ -9,7 +9,6 @@ public class ProductExceptSelf {
 
         int leftProduct = 1;
 
-        // Forward pass
         for (int i = 0; i < n; i++) {
             answer[i] = leftProduct;
             leftProduct *= nums[i];
@@ -17,7 +16,6 @@ public class ProductExceptSelf {
 
         int rightProduct = 1;
 
-        // Backward pass
         for (int i = n - 1; i >= 0; i--) {
             answer[i] *= rightProduct;
             rightProduct *= nums[i];
